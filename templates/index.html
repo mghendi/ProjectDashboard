@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <title>Realtime Projects Dashboard</title>
+    </head>
+    <body>
+        <form method="post" action="/orders">
+            <h3>Add Disbursement</h3>
+            <input type="number" name="amount" placeholder="Amount"><br>
+            <input type="submit" name="Submit">
+        </form>
+        <form method="post" action="/message">
+            <h3>Add Project Description</h3>
+            <input type="text" name="projecttitle" placeholder="Enter Project Title Here"><br>
+            <textarea  name="description" placeholder="Enter Description Here"></textarea><br>
+            <input type="submit" name="Submit">
+        </form>
+        <form method="post" action="/customer">
+            <h3>Add New Project</h3>
+            <input type="text" name="projectref" placeholder="Enter Project Ref."><br>
+            <input type="text" name="country" placeholder="Enter Country"><br>
+            <input type="text" name="implementingoffice" placeholder="Implementing Office Here"><br>
+            <input type="number" name="duration" placeholder="Enter Duration (in months)"><br>
+            <input type="number" name="grantamount" placeholder="Enter Grant Amount Here"><br>
+            <input type="submit" name="Submit">
+        </form>
+    </body>
+    </html>
