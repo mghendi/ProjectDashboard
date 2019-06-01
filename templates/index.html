@@ -1,28 +1,112 @@
 <!DOCTYPE html>
-    <html>
-    <head>
-        <title>Realtime Projects Dashboard</title>
-    </head>
-    <body>
-        <form method="post" action="/orders">
-            <h3>Add Disbursement</h3>
-            <input type="number" name="amount" placeholder="Amount"><br>
-            <input type="submit" name="Submit">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+      
+    <title>UNEP Realtime Projects Dashboard</title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+	<link rel="stylesheet" href="https://formden.com/static/cdn/font-awesome/4.4.0/css/font-awesome.min.css" />
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    
+    <!-- <script>
+			$(document).ready(function(){
+				var date_input=$('input[name="dates_from_gcf"]');
+				var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+				var options={
+					format: 'yyyy/mm/dd',
+					container: container,
+					todayHighlight: true,
+					autoclose: true,
+				};
+				date_input.datepicker(options);
+			})
+	</script>
+
+	<script>
+			$(document).ready(function(){
+				var date_input=$('input[name="start_date"]');
+				var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+				var options={
+					format: 'yyyy/mm/dd',
+					container: container,
+					todayHighlight: true,
+					autoclose: true,
+				};
+				date_input.datepicker(options);
+			})
+	</script>
+
+	<script>
+			$(document).ready(function(){
+				var date_input=$('input[name="end_date"]');
+				var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+				var options={
+					format: 'yyyy/mm/dd',
+					container: container,
+					todayHighlight: true,
+					autoclose: true,
+				};
+				date_input.datepicker(options);
+			})
+	</script> -->
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">UNEP Project Manager</a>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+    <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+        <a class="nav-link" href="/dashboard">
+            <i class="fa fa-fw fa-dashboard"></i>
+            <span class="nav-link-text">Projects Dashboard</span>
+        </a>
+        </li>
+    </ul>
+    </div>
+</nav>
+        <div class="container p-4">
+        <div class="center">
+
+        <form method="post" action="/disbursement"  class="form">
+            <h4>Add Disbursement</h4>
+            <input type="number" name="amount" placeholder="Amount" class="form-control">
+            <input type="submit" name="Submit" class="btn form-control">
         </form>
-        <form method="post" action="/message">
-            <h3>Add Project Description</h3>
-            <input type="text" name="projecttitle" placeholder="Enter Project Title Here"><br>
-            <textarea  name="description" placeholder="Enter Description Here"></textarea><br>
-            <input type="submit" name="Submit">
+
+        <form method="post" action="/description" class="form">
+            <h4>Add Project Description</h4>
+            <input type="text" name="projecttitle" placeholder="Enter Project Title Here" class="form-control">
+            <textarea  name="description" placeholder="Enter Description Here" class="form-control"></textarea>
+            <input type="submit" name="Submit" class="btn form-control">
         </form>
-        <form method="post" action="/customer">
-            <h3>Add New Project</h3>
-            <input type="text" name="projectref" placeholder="Enter Project Ref."><br>
-            <input type="text" name="country" placeholder="Enter Country"><br>
-            <input type="text" name="implementingoffice" placeholder="Implementing Office Here"><br>
-            <input type="number" name="duration" placeholder="Enter Duration (in months)"><br>
-            <input type="number" name="grantamount" placeholder="Enter Grant Amount Here"><br>
-            <input type="submit" name="Submit">
+
+        <form method="post" action="/projects" class="form">
+            <h4>Add New Project</h4>
+            <input type="text" name="projectref" placeholder="Enter Project Ref." class="form-control">
+            <input type="text" name="country" placeholder="Enter Country" class="form-control">
+            <input type="text" name="implementingoffice" placeholder="Implementing Office Here" class="form-control">
+            <input type="number" name="duration" placeholder="Enter Duration (in months)" class="form-control">
+            <input type="number" name="grantamount" placeholder="Enter Grant Amount Here" class="form-control">
+            <input type="submit" name="Submit" class="btn form-control">
         </form>
+
+        </div>
+        </div>
+    
+    <footer class="fixed-bottom">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <p>Copyright © UNEP Projects Dashboard 2019</p>
+        </nav>
+    </footer>
     </body>
     </html>
